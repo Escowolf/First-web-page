@@ -3,6 +3,9 @@
         <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
         <title>Auxílio Emergencial</title>
         <style>
+            .body{
+                background-color: black;
+            }
             .item1 { 
                 grid-area: menu;
                 display:flex;
@@ -15,12 +18,21 @@
                 width: 150px;
             }
             .item3 { 
-                grid-area: main; 
+                grid-area: main;
+                background-color: rgba(144, 175, 233, 0.349);
             }
             
             .item4 { 
                 grid-area: footer;
                 text-align: center;
+                color: whitesmoke;
+                font-size:12px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: rgba(144, 175, 233, 0.349);
+            }
+            .aside{
+                padding: 10px;
+                background-color: rgba(144, 175, 233, 0.349);
             }
 
             .grid-container {
@@ -32,13 +44,15 @@
                 grid-gap: 5px;
                 background-color: #c1c2c300;
                 padding: 0px;
+                margin-left: 5%;
+                margin-right: 5%;
                 margin-bottom : .5em;
                 border: 0px;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color:whitesmoke;
             }
             
             .grid-container > div {
-                background-color: rgb(128, 128, 128);
                 margin-top: 10px;
             }
             
@@ -47,15 +61,14 @@
             }
             a:hover {
                 color: rgb(200, 200, 200);
-                border-bottom:3px solid #ebebeb;
+                border-bottom:3px solid #cecece;
             }
 
             table{
-                width: 800px;
+                padding: 3px;
                 margin:auto;
                 margin-bottom : .5em;
                 text-align: justify;
-                border: 0px;
             }
             
             p{
@@ -83,7 +96,6 @@
                 display: inline-block;
                 color: whitesmoke;
             }
-
             #menu li a img{
                 width: 100px;
             }
@@ -91,7 +103,7 @@
     </head>
 
 
-<body style="background-color: #BBC3C9;">
+<body class="body">
     
     <div class="grid-container">
         <div class="item1">

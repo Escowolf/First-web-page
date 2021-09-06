@@ -1,12 +1,10 @@
-<script>
- function enviar(){
+function enviar(){
     var nome = document.getElementById("txtnome").value;
-    var telefone = document.getElementById("txttelefone").value;
-    var email = document.getElementById("txtemail").value;
+    var data = document.getElementById("date").value;
+    var cpf = document.getElementById("cpf").value;
+    var email = document.getElementById("email").value;
                  
-    var texto = "Nome: " +nome + "; Telefone: "+ telefone + "; Email: "+email;
-                 
+    var texto = "Nome: " +nome + "; Data de Nascimento: "+ data + "; Email: "+email;
+      console.log(texto);            
     return true;
-                 
-    }
- </script>
+   }

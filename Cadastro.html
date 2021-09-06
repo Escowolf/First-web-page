@@ -1,76 +1,155 @@
 <!DOCTYPE html>
-<head>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-    <title>Cadastro - Auxílio</title>
-    <style>
-        a{
-            color:#1b1b1b;
-            text-decoration: none;    
-        }
-        a:hover {
-            background-color:#D6D6D6;
-            color: #6D6D6D;
-            border-bottom:3px solid #fdfdfd;
-        }
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <title>Cadastro - Auxílio Emergencial</title>
+        <style>
+            .body{
+                background-color: black;
+            }
+            .item1 { 
+                grid-area: menu;
+                display:flex;
+                align-items: center;
+                font-size: 15pt;
+                padding: 1px black;
+            }
+            .item2,img { 
+                grid-area: logo;
+                width: 150px;
+            }
+            .item3 { 
+                grid-area: main;
+                padding-left: 10%;
+                padding-bottom: 5%;
+                background-color: rgba(144, 175, 233, 0.349);
+            }
+            
+            .item4 { 
+                grid-area: footer;
+                text-align: center;
+                color: whitesmoke;
+                font-size:12px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: rgba(144, 175, 233, 0.349);
+            }
+            .aside{
+                padding: 10px;
+                background-color: rgba(144, 175, 233, 0.349);
+            }
 
-        table{
-            width: 800px;
-            margin:auto;
-            margin-bottom : .5em;
-            text-align: justify;
-            border: 0px;
-        }
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                'logo menu menu menu'
+                'aside main main main'
+                'footer footer footer footer';
+                grid-gap: 5px;
+                background-color: #c1c2c300;
+                padding: 0px;
+                margin-left: 5%;
+                margin-right: 5%;
+                margin-bottom : .5em;
+                border: 0px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color:whitesmoke;
+            }
+            
+            .grid-container > div {
+                margin-top: 10px;
+            }
+            
+            a{
+                text-decoration: none;    
+            }
+            a:hover {
+                color: rgb(200, 200, 200);
+                border-bottom:3px solid #cecece;
+            }
+
+            table{
+                padding: 3px;
+                margin:auto;
+                margin-bottom : .5em;
+                text-align: justify;
+            }
+            
+            h1,h2{
+                width: 250px;
+                padding-right: 4px 4px;
+            }
+            h3{
+                font-size: 14px;
+                width: 250px;
+            }
+
+            #menu ul {
+                padding:0px;
+                margin: 0px;
+                height: 42px;
+                list-style:none;
+            }
+            #menu ul li { 
+                display: inline;
+                align-items: center;
+                justify-content: center;
+                color: whitesmoke;
+            }
+            #menu ul li a {
+                padding: 2px 10px;
+                display: inline-block;
+                color: whitesmoke;
+            }
+            #menu li a img{
+                width: 100px;
+            }
+        </style>
+        <script>
+            function enviar(){
+                var nome = document.getElementById("txtnome").value;
+                var data = document.getElementById("date").value;
+                var cpf = document.getElementById("cpf").value;
+                var email = document.getElementById("email").value;
+                 
+                var texto = "Nome: " +nome + "; Data de Nascimento: "+ data + "; Email: "+email;
+                console.log(texto);            
+                return true;
+            }
+        </script>
+    </head>
+
+
+<body class="body">
+    
+    <div class="grid-container">
+        <div class="item1">
+            <nav id="menu">
+                <ul>
+                    <li><a href="/Users/WINPC/Desktop/testzone/index.html">Início</a></li>
+                    <li>|</li>
+                    <li><a href="/Users/WINPC/Desktop/testzone/Cadastro.html">Cadastro</a></li>
+                </ul> 
+            </nav>
+        </div>
+        <div class="item2"><a href=""><img src="Images/testlog.svg" alt="Auxílio Emergencial"></a></div>
+       <div class="aside"><h1>Auxílio Emergencial</h1>
+        <h2>Realize seu cadastro ao lado!</h2>
+        <h3>Para realizar seu cadastro preencha os campos ao lado.</h3></div>
+        <div class="item3">
+                <form onsubmit="return enviar();">
+                    <h1>Dados cadastrais</h1>
+                    <label>Nome:</label><br>
+                    <input type="text" id="txtnome"><br>
+                    <label>Data de Nascimento:</label><br>
+                    <input type="date" id="date"><br>
+                    <label>CPF:</label><br>
+                    <input type="number" id="cpf"><br>
+                    <label>E-mail:</label><br>
+                    <input type="email" id="email"><br><br>
+                    <input type="submit">
+                </form>
+        </div>
         
-        p{
-            color: #3b3b3b;
-            font-size: large;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        h1,h2{
-            width: 250px;
-            color:azure;
-        }
-        #menu ul {
-            padding:0px;
-            margin:0px;
-            background-color:#EDEDED;
-            list-style:none;
-        }
-        #menu ul li { 
-            display: inline;
-            align-items: center;
-            justify-content: center;
-        }
-        #menu ul li a {
-            padding: 2px 10px;
-            display: inline-block;
-        }
-
-        #menu li a img{
-            width: 100px;
-        }
-
-        form{
-            padding:2px 2px;
-        }
-    </style>
-</head>
-
-<body style="background-color: #BBC3C9;">
-    <div class="content">
-        <nav id="menu">
-            <ul>
-                <li><a href=""><img src="Images/testlog.png" alt="Auxílio Emergencial"></a></li>
-                <li><a href="/Users/WINPC/Desktop/testzone/index.html">Início</a></li>
-                <li>|</li>
-                <li><a href="">Cadastro</a></li>
-            </ul> 
-        </nav>
-        <form onsubmit="return enviar();">
-            <h1>Dados cadastrais</h1>
-            <input type="text" id="txtnome">
-            <input type="submit">
-        </form>
+        <div class="item4"><strong>Ezequiel Sousa</strong> - Disciplina de Amb. Desen. Softwares <br> Todos os direitos garantidos - 2021 © </div>
     </div>
 </body>
 </html>
