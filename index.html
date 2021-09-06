@@ -3,36 +3,67 @@
         <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
         <title>Auxílio Emergencial</title>
         <style>
-            #boxMenu{
-                size: 16px;
-                text-shadow:rgb(250, 198, 85) 2px 2px 3px;
-                position: fixed;
-                image-rendering: auto;
+            a{
+                color:#1b1b1b;
+                text-decoration: none;    
             }
-            img{
-                max-width: 82px;
-                min-width: 10px;
+            a:hover {
+                background-color:#D6D6D6;
+                color: #6D6D6D;
+                border-bottom:3px solid #fdfdfd;
             }
+
             table{
-                width: 100%;
+                width: 800px;
+                margin:auto;
                 margin-bottom : .5em;
-                table-layout: fixed;
                 text-align: justify;
-                }
-            h2{
-                font-family:Arial, Helvetica, sans-serif;
-                font-weight: 100;
-                background-color: rgb(226, 226, 36);
+                border: 0px;
+            }
+            
+            p{
+                color: #2A00FF;
+            }
+            h1,h2{
+                width: 250px;
+                color:azure;
+            }
+            #menu ul {
+                padding:0px;
+                margin:0px;
+                background-color:#EDEDED;
+                list-style:none;
+            }
+            #menu ul li { 
+                display: inline;
+                align-items: center;
+                justify-content: center;
+            }
+            #menu ul li a {
+                padding: 2px 10px;
+                display: inline-block;
+            }
+
+            #menu li a img{
+                width: 100px;
             }
         </style>
     </head>
-    <body>
-    <div>
-        <a href=""><img src="Images/testlog.png" alt="Auxílio Emergencial"></a>
-        <a href="">Início</a> |
-        <a href="">Cadastro</a>
-    <table>
-        <tr>
+
+
+<body style="background-color: #BBC3C9;">
+    <div class="content">
+        <nav id="menu">
+            <ul>
+                <li><a href=""><img src="Images/testlog.png" alt="Auxílio Emergencial"></a></li>
+                <li><a href="">Início</a></li>
+                <li>|</li>
+                <li><a href="">Cadastro</a></li>
+            </ul> 
+        </nav>
+    <div class="table-responsive">
+    <table class="table">
+       <tr>
             <td><h1>Auxílio Emergencial</h1>
                 <h2>Você já ouviu falar deste recurso durante a pandemia?</h2>
             </td>
@@ -53,6 +84,7 @@
                  R$375 para mães solteiras.</p></td>
         </tr>
     </table>
+</div>
 </div>
 </body>
 </html>
