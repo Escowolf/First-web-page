@@ -4,58 +4,52 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <title>Cadastro - Auxílio Emergencial</title>
     <link href="style.css" rel="stylesheet">
-    <script>
-        function enviar() {
-            var nome = document.getElementById("txtnome").value;
-            var data = document.getElementById("date").value;
-            var cpf = document.getElementById("cpf").value;
-            var email = document.getElementById("email").value;
-
-            var texto = "Nome: " + nome + "; Data de Nascimento: " + data + "; Email: " + email;
-            console.log(texto);
-            return true;
-        }
-    </script>
+    <script type="text/javascript" src="savedata.js"></script>
 </head>
 
+<body>
+    <header class="header">
+        <a href=""><img src="Images/testlog.svg" alt="Auxílio Emergencial"></a>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="/">Outros programas</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<body class="body">
+    <section>
+        <table class="content">
+            <div class="divisorias">
+                <tr>
+                    <td id="titulo" class="aside">
+                        <h1>Auxílio Emergencial</h1>
+                        <h2>Realize seu cadastro ao lado!</h2>
+                        <p>Para realizar seu cadastro preencha os campos ao lado. </p>
+                    </td>
+                    <td id="conteudo" class="content">
+                        <h1>Dados cadastrais</h1>
+                        <form action="mailto:escosou@gmail.com?subject=Cadastro">
+                            <label for="name">Nome:</label><br>
+                            <input type="text " id="txtnome " placeholder="Nome completo "><br>
+                            <label for="date">Data de Nascimento:</label><br>
+                            <input type="date" id="date"><br>
+                            <label for="cpf">CPF<br></label>
+                            <input type="text " name="cpf " pattern=[0-9]{11} title="Somente números " onblur="formataCPF(this) " placeholder="Somente números "><br>
+                            <label for="email">E-mail:</label><br>
+                            <input type="email" id="email " placeholder="meuemail@gmail.com "><br><br>
+                            <input type="submit" value="Enviar ">
+                        </form>
+                    </td>
+                </tr>
+            </div>
+        </table>
+        <footer class="footer">
+            © 2021 <strong>Ezequiel Sousa</strong> - Todos os direitos reservados<br>Disciplina de Amb. Desen. Softwares
+        </footer>
+    </section>
 
-    <div class="grid-container">
-        <div class="item1">
-            <nav id="menu">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li>|</li>
-                    <li><a href="/Cadastro.html">Cadastro</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="item2">
-            <a href="index.html"><img src="Images/testlog.svg" alt="Auxílio Emergencial"></a>
-        </div>
-        <div class="aside">
-            <h1>Auxílio Emergencial</h1>
-            <h2>Realize seu cadastro ao lado!</h2>
-            <h3>Para realizar seu cadastro preencha os campos ao lado.</h3>
-        </div>
-        <div class="item3">
-            <form onsubmit="return enviar();">
-                <h1>Dados cadastrais</h1>
-                <label>Nome:</label><br>
-                <input type="text" id="txtnome"><br>
-                <label>Data de Nascimento:</label><br>
-                <input type="date" id="date"><br>
-                <label>CPF:</label><br>
-                <input type="number" id="cpf"><br>
-                <label>E-mail:</label><br>
-                <input type="email" id="email"><br><br>
-                <input type="submit">
-            </form>
-        </div>
-
-        <div class="item4"><strong>Ezequiel Sousa</strong> - Disciplina de Amb. Desen. Softwares <br> Todos os direitos garantidos - 2021 © </div>
-    </div>
 </body>
 
 </html>
