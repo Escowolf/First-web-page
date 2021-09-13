@@ -1,7 +1,7 @@
-function validar() {
-    var nome = form.name.value;
+function validar(name) {
+    var name = form.name.value;
 
-    if (nome == "") {
+    if (name == "") {
         alert('Preencha o campo com seu nome');
         form.name.focus();
         return false;
