@@ -1,8 +1,9 @@
-function validar(name) {
+function ValidarNome(name) {
     console.log(name);
-    if (name == "00000000000") {
+    if (name == "") {
         return false;
     }
     return true;
 }
-let name = "00000000000";
+let name = "";
+console.log(ValidarNome(name));
