@@ -37,5 +37,5 @@ function TestaCPF(cpf) {
 
     return true;
 }
-let cpf = "0123456789";
-console.log(TestaCPF(cpf));
+/*let cpf = "01234567890";
+console.log(TestaCPF(cpf)); */
