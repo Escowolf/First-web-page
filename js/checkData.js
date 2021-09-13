@@ -1,9 +1,8 @@
 function validar(name) {
-    var name = form.name.value;
-
-    if (name == "") {
-        alert('Preencha o campo com seu nome');
-        form.name.focus();
+    console.log(name);
+    if (name == "00000000000") {
         return false;
     }
+    return true;
 }
+let name = "00000000000";
