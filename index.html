@@ -2,10 +2,17 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Auxílio Emergencial</title>
     <link href="style.css" rel="stylesheet">
-    <script type="text/javascript" src="testData.js"></script>
-    <script type="text/javascript" src="checkData.js"></script>
+    <script type="text/javascript" src="/js/testData.js"></script>
+    <script>
+        function dark() {
+            var e1 = document.body;
+            e1.classList.toggle("dark-mode");
+        }
+    </script>
+
 </head>
 
 <body>
@@ -16,19 +23,21 @@
                 <li><a href="index.html">Início</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
                 <li><a href="outros_programas.html">Outros programas</a></li>
+                <li><button id="btn" onclick="dark()">Modo<br>escuro</button></li>
+
             </ul>
         </nav>
     </header>
 
     <section>
-        <table class="content">
-            <div class="divisorias">
+        <table type="content" class="content">
+            <div>
                 <tr>
-                    <td id="titulo" class="aside">
+                    <td class="aside">
                         <h1>Auxílio Emergencial</h1>
                         <h2>Você já ouviu falar deste recurso durante a pandemia?</h2>
                     </td>
-                    <td id="conteudo" class="content">
+                    <td>
                         <p>O auxílio emergencial (também chamado de Caixa Auxílio Emergencial ou coronavoucher) é um benefício instituído no Brasil pela Lei de nº 13.982/2020, que previu o repasse de 600 reais mensais (inicialmente por três meses) a trabalhadores
                             informais e de baixa renda, microempreendedores individuais e também contribuintes individuais do Instituto Nacional do Seguro Social (INSS). O objetivo do auxílio foi mitigar os impactos econômicos causados pela Pandemia de
                             COVID-19 no Brasil. No ano de 2020, o auxílio começou a ser pago no mês de abril, no valor de R$ 600,00 (seiscentos reais), e foi até o mês de dezembro. O valor estimado empreendido pelo Governo para o pagamento do auxílio

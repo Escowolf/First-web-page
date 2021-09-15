@@ -4,6 +4,13 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <title>Cadastro - Auxílio Emergencial</title>
     <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="/js/testData.js"></script>
+    <script>
+        function dark() {
+            var e1 = document.body;
+            e1.classList.toggle("dark-mode");
+        }
+    </script>
 </head>
 
 <body>
@@ -14,6 +21,8 @@
                 <li><a href="index.html">Início</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
                 <li><a href="/">Outros programas</a></li>
+                <li><button id="btn" onclick="dark()">Modo<br>escuro</button></li>
+
             </ul>
         </nav>
     </header>
@@ -28,26 +37,28 @@
                     </td>
                     <td id="conteudo" class="content">
                         <h3>Links informativos</h3>
-                        <ul>
-                            <li>
-                                <a class="links" href="https://pt.wikipedia.org/wiki/Bolsa_Atleta ">Bolsa Atleta</a>
-                            </li>
-                            <li>
-                                <a class="links" href="https://pt.wikipedia.org/wiki/Bolsa_Fam%C3%ADlia ">Bolsa Família</a>
-                            </li>
-                            <li>
-                                <a class="links" href="https://pt.wikipedia.org/wiki/Bolsa_Verde ">Bolsa Verde</a>
-                            </li>
-                            <li>
-                                <a class="links" href="https://pt.wikipedia.org/wiki/Brasil_Carinhoso ">Brasil Carinhoso</a>
-                            </li>
-                            <li>
-                                <a class="links" href="https://pt.wikipedia.org/wiki/Plano_Brasil_Maior ">Plano Brasil Maior</a>
-                            </li>
-                            <li>
-                                <a class="links" href="https://pt.wikipedia.org/wiki/Brasil_sem_Mis%C3%A9ria ">Brasil sem Miséria</a>
-                            </li>
-                        </ul>
+                        <p>
+                            <ul>
+                                <li>
+                                    <a class="links" href="https://pt.wikipedia.org/wiki/Bolsa_Atleta ">Bolsa Atleta</a>
+                                </li>
+                                <li>
+                                    <a class="links" href="https://pt.wikipedia.org/wiki/Bolsa_Fam%C3%ADlia ">Bolsa Família</a>
+                                </li>
+                                <li>
+                                    <a class="links" href="https://pt.wikipedia.org/wiki/Bolsa_Verde ">Bolsa Verde</a>
+                                </li>
+                                <li>
+                                    <a class="links" href="https://pt.wikipedia.org/wiki/Brasil_Carinhoso ">Brasil Carinhoso</a>
+                                </li>
+                                <li>
+                                    <a class="links" href="https://pt.wikipedia.org/wiki/Plano_Brasil_Maior ">Plano Brasil Maior</a>
+                                </li>
+                                <li>
+                                    <a class="links" href="https://pt.wikipedia.org/wiki/Brasil_sem_Mis%C3%A9ria ">Brasil sem Miséria</a>
+                                </li>
+                            </ul>
+                        </p>
                     </td>
                 </tr>
             </div>

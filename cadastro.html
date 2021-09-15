@@ -5,7 +5,12 @@
     <title>Cadastro - Auxílio Emergencial</title>
     <link href="style.css" rel="stylesheet">
     <script type="text/javascript" src="/js/testData.js"></script>
-    <script type="text/javascript" src="/js/checkData.js"></script>
+    <script>
+        function dark() {
+            var e1 = document.body;
+            e1.classList.toggle("dark-mode");
+        }
+    </script>
 </head>
 
 <body>
@@ -16,6 +21,8 @@
                 <li><a href="index.html">Início</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
                 <li><a href="outros_programas.html">Outros programas</a></li>
+                <li><button id="btn" onclick="dark()">Modo<br>escuro</button></li>
+
             </ul>
         </nav>
     </header>
@@ -41,14 +48,14 @@
                             <input type="text" name="cpf" pattern=[0-9]{11} title="CPF inválido!" onblur="formataCPF(this)" placeholder="Somente números"><br>
                             <label for="email">E-mail:</label><br>
                             <input type="email" id="email" placeholder="meuemail@gmail.com" required><br><br>
-                            <li><input type="button" onclick="checkData()" value="Checar"></li>
-                            <li><input type="submit" value="Enviar"></li>
+                            <p> <button onclick="checkData()" value="checar">Check</button>
+                                <button type="submit " value="enviar">Enviar</button></p>
                         </form>
                     </td>
                 </tr>
             </div>
         </table>
-        <footer class="footer">
+        <footer class="footer ">
             © 2021 <strong>Ezequiel Sousa</strong> - Todos os direitos reservados<br>Disciplina de Amb. Desen. Softwares
         </footer>
     </section>
