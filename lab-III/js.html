@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+        <meta name="description" content="Ambientes Desenvolvimento Software">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Ezequiel Sousa Silva">
+        <script type="text/javascript"></script>
+    <title>Problema dos Pinos</title>
+    <script>
+function capturar(){
+    let N = document.getElementById('n1').value;
+    MovePino(N, 'A','B','C')
+
+       function MovePino(N, Orig, Aux, Dest) {
+    if (N <= 1) {
+        MoveDisco(Orig, Dest);
+    } else {
+        MovePino(N - 1, Orig, Dest, Aux);
+        MoveDisco(Orig, Dest);
+        MovePino(N - 1, Aux, Orig, Dest);
+    }
+}
+}
+
+function MoveDisco(Orig, Dest) {
+    document.write("Movimento: ", Orig, "-> ", Dest+"<br>");
+}
+        
+    </script>
+</head>
+
+<body>
+    <form name="form">
+        Número: <input type="number" id="n1" name="n1" placeholder="Digite o número" min="1" required>
+		<input type="button" value="Mover" name="btnMover" onclick="capturar()"><p id="valorDigitado"></p>
+    </form>
+		
+
+</body>
+
+</html>
