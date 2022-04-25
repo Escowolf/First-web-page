@@ -1,3 +1,4 @@
-# Testzone
+# Cadastro
 ## Hello, Stranger! :computer:
-Está é a zona de teste de todos os meus projetos. Algumas coisas podem não fazer sentido, mas são importantes para a minha aprendizagem.
+
+Este é um protótipo inicial de uma página de cadastro em html, js e css puro.
